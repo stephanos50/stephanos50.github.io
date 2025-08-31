@@ -6,132 +6,7 @@
   <title>Mon Portfolio GitHub</title>
   <meta name="description" content="Portfolio simple pour présenter plus de 6 projets GitHub." />
   <meta name="color-scheme" content="light dark" />
-  <style>
-    /* ===
-      Portfolio GitHub – fichier unique (HTML + CSS)
-      - Dépose ce fichier comme index.html dans un repo public
-      - Active GitHub Pages (Settings → Pages → Deploy from a branch → main /root)
-      - Remplace stephanos50, liens et descriptions ci-dessous
-    === */
-
-    :root {
-      --bg: hsl(220 20% 98%);
-      --card: hsl(0 0% 100%);
-      --text: hsl(222 47% 11%);
-      --muted: hsl(220 9% 46%);
-      --accent: hsl(248 72% 58%);
-      --accent-2: hsl(207 90% 54%);
-      --ring: hsl(248 72% 58% / 20%);
-      --border: hsl(220 13% 91%);
-      --shadow: 0 10px 30px hsl(220 10% 20% / 10%);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: hsl(222 47% 5%);
-        --card: hsl(222 47% 7%);
-        --text: hsl(210 40% 98%);
-        --muted: hsl(215 20% 65%);
-        --accent: hsl(263 74% 66%);
-        --accent-2: hsl(207 90% 64%);
-        --ring: hsl(263 74% 66% / 25%);
-        --border: hsl(222 15% 20%);
-        --shadow: 0 10px 30px hsl(0 0% 0% / 40%);
-      }
-    }
-
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--text);
-      background: radial-gradient(1200px 600px at 10% -10%, var(--ring), transparent 50%),
-                  radial-gradient(1200px 600px at 110% 10%, var(--ring), transparent 50%),
-                  var(--bg);
-      line-height: 1.6;
-    }
-
-    .container { max-width: 1100px; padding: 24px; margin: 0 auto; }
-
-    header.hero {
-      padding: 56px 0 28px;
-    }
-
-    .hero-card {
-      display: grid;
-      grid-template-columns: 96px 1fr;
-      gap: 20px;
-      align-items: center;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      padding: 20px;
-    }
-
-    .avatar {
-      width: 96px; height: 96px; border-radius: 50%;
-      border: 3px solid var(--border);
-      object-fit: cover; object-position: center;
-    }
-
-    h1 { font-size: clamp(22px, 2.2vw, 32px); margin: 0 0 6px; }
-    .subtitle { color: var(--muted); margin: 0 0 16px; }
-
-    .btns { display: flex; gap: 10px; flex-wrap: wrap; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 14px; border-radius: 999px; border: 1px solid var(--border);
-      background: linear-gradient(180deg, var(--card), transparent);
-      text-decoration: none; color: var(--text); font-weight: 600; font-size: 14px;
-      box-shadow: var(--shadow);
-      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-    }
-    .btn:hover { transform: translateY(-1px); border-color: var(--accent); box-shadow: 0 12px 24px var(--ring); }
-    .btn.primary { background: linear-gradient(180deg, var(--accent), var(--accent-2)); color: white; border: none; }
-    .btn.primary:hover { box-shadow: 0 12px 24px var(--ring); }
-
-    /* Sections */
-    section { margin: 28px 0 40px; }
-    .section-title { font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
-
-    /* Cards Grid */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(1, minmax(0, 1fr));
-      gap: 16px;
-    }
-    @media (min-width: 700px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (min-width: 1000px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-
-    .card {
-      display: grid; grid-template-rows: auto 1fr auto;
-      gap: 10px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: var(--shadow);
-      transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
-    }
-    .card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 16px 32px var(--ring); }
-
-    .card a.title { text-decoration: none; color: inherit; font-weight: 700; font-size: 16px; }
-    .desc { color: var(--muted); font-size: 14px; }
-
-    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
-    .badge { font-size: 12px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border); background: linear-gradient(180deg, var(--card), transparent); color: var(--muted); }
-
-    footer { margin: 60px 0 40px; color: var(--muted); font-size: 14px; text-align: center; }
-
-    /* Small decorative sparkles */
-    .sparkles {
-      display: inline-block; font-size: 18px; line-height: 1; margin-left: 4px; filter: saturate(1.2);
-      animation: twinkle 2.2s ease-in-out infinite;
-    }
-    @keyframes twinkle { 0%, 100% { opacity: .65; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-1px); } }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="hero">
@@ -140,8 +15,8 @@
         <!-- Remplace stephanos50 par ton pseudo GitHub pour charger automatiquement ton avatar -->
         <img class="avatar" src="https://github.com/stephanos50.png" alt="Avatar GitHub" />
         <div>
-          <h1>Salut, moi c’est <strong>stephanos50</strong> <span class="sparkles">✨</span></h1>
-          <p class="subtitle">Développeur·e passionné·e — voici plus de <em>6+</em> projets triés sur le volet. Clique pour voir le repo.</p>
+          <h1>Salut, moi c’est <strong>Stefan</strong> <span class="sparkles">✨</span></h1>
+          <p class="subtitle">Cours & quelques projets concrets — clique pour ouvrir le dépôt correspondant.</p>
           <div class="btns">
             <a class="btn primary" href="https://github.com/stephanos50" target="_blank" rel="noreferrer noopener">Voir mon GitHub</a>
             <a class="btn" href="mailto:contact@example.com">Me contacter</a>
@@ -155,106 +30,107 @@
   <main class="container">
     <section id="apropos">
       <p class="section-title">À propos</p>
-      <p>
-        Décris ici ton focus (ex. Backend Node/Go, Frontend React/Vue, Data, DevOps). Mentionne tes points forts et ce que tu recherches.
-        Ce portfolio est fait pour outrepasser la limite des 6 épingles GitHub.
-      </p>
+      <p><strong>Développeur full stack</strong></p>
+      
     </section>
 
+  <section id="cours">
+        <p class="section-title">Cours & exercices</p>
+        <div class="grid">
+        <article class="card">
+        <a class="title" href="https://github.com/stephanos50/JavaScript-Essentials-1" target="_blank" rel="noreferrer noopener">Cours JavaScript 1</a>
+        <p class="desc">JavaScript Essentials 1 — Parcours 8 semaines</p>
+        <div class="badges"><span class="badge">JavaScript</span></div>
+        </article>
+
+        <article class="card">
+        <a class="title" href="https://github.com/stephanos50/JavaScript-Essentials-2" target="_blank" rel="noreferrer noopener">Cours JavaScript 2</a>
+        <p class="desc">JavaScript Essentials 2 — Parcours 8 semaines</p>
+        <div class="badges"><span class="badge">JavaScript</span></div>
+        </article>
+
+        <article class="card">
+        <a class="title" href="https://github.com/stephanos50/PCEP-Python-Essentials-1" target="_blank" rel="noreferrer noopener">PCEP — Python Essentials 1</a>
+        <p class="desc">Python Essentials 1 (PCEP) — Parcours 8 semaines</p>
+        <div class="badges"><span class="badge">Python</span></div>
+        </article>
+
+        <article class="card">
+        <a class="title" href="https://github.com/stephanos50/PCAP-Python-Essentials-2" target="_blank" rel="noreferrer noopener">PCAP — Python Essentials 2</a>
+        <p class="desc">Python Essentials 2 (PCAP) — Parcours 8 semaines</p>
+        <div class="badges"><span class="badge">Python</span></div>
+        </article>
+
+        <article class="card">
+        <a class="title" href="https://github.com/stephanos50/HTML-Essentials-All-With-HTML" target="_blank" rel="noreferrer noopener">HTML — Essentials</a>
+        <p class="desc">HTML Essentials — Parcours 8 semaines</p>
+        <div class="badges"><span class="badge">HTML</span></div>
+        </article>
+
+        <article class="card">
+        <a class="title" href="https://github.com/stephanos50/CSS-Essentials-All-With-CSS" target="_blank" rel="noreferrer noopener">CSS — Essentials</a>
+        <p class="desc">Web Dev Essentials 2: CSS (WDA-41-01) — Parcours 8 semaines</p>
+        <div class="badges"><span class="badge">CSS</span></div>
+        </article>
+        </div>
+      </section>
+
     <section id="projets">
-      <p class="section-title">Projets (exemples — ajoute/retire librement)</p>
-      <div class="grid">
-        <!-- Duplique un .card par projet. Garde autant de cartes que nécessaire (aucune limite). -->
-        <article class="card">
-          <a class="title" href="https://github.com/stephanos50/projet-a" target="_blank" rel="noreferrer noopener">Projet A — API FastAPI</a>
-          <p class="desc">API REST avec authentification JWT, tests PyTest, CI GitHub Actions, Docker compose.</p>
+      <p class="section-title">Projets</p>
+        <div class="grid">
+          <article class="card">
+          <h3 style="margin:0; font-size:16px;">Stage — Développement PHP</h3>
+          <p class="desc">Maintenance et petites fonctionnalités côté serveur, pages dynamiques, collaboration avec l’équipe, versioning Git.</p>
           <div class="badges">
-            <span class="badge">Python</span>
-            <span class="badge">FastAPI</span>
-            <span class="badge">PostgreSQL</span>
-            <span class="badge">Docker</span>
+            <span class="badge">Laravel</span>
+            <span class="badge">PHP</span>
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">Git</span>
+          </div>
+          </article>
+       
+     
+         <article class="card">
+          <a class="title" href="https://github.com/stephanos50/Take-away" target="_blank" rel="noreferrer noopener">Projet de fin d'étude — Take-Away</a>
+          <p class="desc"> Commande de repas en ligne facile et pratique.</p>
+          <div class="badges">
+              <span class="badge">Javascript</span>
+              <span class="badge">Node Js</span>
+              <span class="badge">React Js</span>
+              <span class="badge">Redux</span>
+              <span class="badge">PostgreSQL</span>
+              <span class="badge">Heroku</span>
           </div>
         </article>
-
         <article class="card">
-          <a class="title" href="https://github.com/stephanos50/projet-b" target="_blank" rel="noreferrer noopener">Projet B — App React + Vite</a>
-          <p class="desc">SPA performante, routing, formulaires, tests Vitest, déploiement sur GitHub Pages.</p>
-          <div class="badges">
-            <span class="badge">TypeScript</span>
-            <span class="badge">React</span>
-            <span class="badge">Vite</span>
-            <span class="badge">ESLint</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <a class="title" href="https://github.com/stephanos50/projet-c" target="_blank" rel="noreferrer noopener">Projet C — CLI Node</a>
-          <p class="desc">Outil en ligne de commande pour générer des templates de projet, publié sur npm.</p>
-          <div class="badges">
-            <span class="badge">Node.js</span>
-            <span class="badge">CLI</span>
-            <span class="badge">npm</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <a class="title" href="https://github.com/stephanos50/projet-d" target="_blank" rel="noreferrer noopener">Projet D — Dashboard Data</a>
-          <p class="desc">Tableau de bord analytique avec cache Redis et graphiques dynamiques.</p>
-          <div class="badges">
-            <span class="badge">Go</span>
-            <span class="badge">Redis</span>
-            <span class="badge">Charts</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <a class="title" href="https://github.com/stephanos50/projet-e" target="_blank" rel="noreferrer noopener">Projet E — Portfolio 3D</a>
-          <p class="desc">Expériences WebGL légères avec progressive enhancement et fallback.</p>
-          <div class="badges">
-            <span class="badge">Three.js</span>
-            <span class="badge">WebGL</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <a class="title" href="https://github.com/stephanos50/projet-f" target="_blank" rel="noreferrer noopener">Projet F — Infra as Code</a>
-          <p class="desc">Provisionnement reproductible d’une stack sur cloud public.</p>
-          <div class="badges">
-            <span class="badge">Terraform</span>
-            <span class="badge">CI/CD</span>
-            <span class="badge">Kubernetes</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <a class="title" href="https://github.com/stephanos50/projet-g" target="_blank" rel="noreferrer noopener">Projet G — Extension VS Code</a>
-          <p class="desc">Productivité accrue grâce à des snippets contextuels et une UI soignée.</p>
-          <div class="badges">
-            <span class="badge">TypeScript</span>
-            <span class="badge">VS Code</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <a class="title" href="https://github.com/stephanos50/projet-h" target="_blank" rel="noreferrer noopener">Projet H — Microservice Events</a>
-          <p class="desc">Architecture event-driven avec Kafka, observabilité et tests contractuels.</p>
+          <a class="title" href="https://github.com/stephanos50/GamePacman" target="_blank" rel="noreferrer noopener">Projet — Game Pacman</a>
+          <p class="desc">Jeu inspiré de Pac-Man qui combine aventure et stratégie</p>
           <div class="badges">
             <span class="badge">Java</span>
-            <span class="badge">Kafka</span>
-            <span class="badge">OpenTelemetry</span>
+            <span class="badge">JavaFX</span>
+            <span class="badge">POO</span>
+            <span class="badge">Obserer Observable</span>
+            <span class="badge">Singleton</span>
+             <span class="badge">Facade</span>
+            
+
+
           </div>
         </article>
+       
+    
       </div>
     </section>
 
     <section id="contact">
       <p class="section-title">Contact</p>
-      <p>👉 <a href="mailto:contact@example.com">contact@example.com</a> · <a href="https://github.com/stephanos50" target="_blank" rel="noreferrer noopener">github.com/stephanos50</a></p>
+      <p>👉 <a href="stefan.arvanitis@pm.me">stefan.arvanitis@pm.me</a> · <a href="https://github.com/stephanos50" target="_blank" rel="noreferrer noopener">github.com/stephanos50</a></p>
     </section>
   </main>
 
   <footer>
-    <div class="container">Fait avec ❤︎ &nbsp;—&nbsp; thème léger/dark automatique (prefers-color-scheme).</div>
+    <div class="container">Fait avec ❤︎ &nbsp;—&nbsp; thème léger/dark automatique.</div>
   </footer>
 </body>
 </html>
